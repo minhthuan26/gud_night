@@ -50,15 +50,15 @@ window.addEventListener('touchstart', (e) => {
 window.addEventListener('touchmove', (e) => {
     const currentY = e.touches[0].clientY; // Get the current Y position
     if (currentY > startY && left_x < 0) {
-        left_container.style.transform = `translateX(${left_x += 10}%)`
-        right_container.style.transform = `translateX(${right_x -= 10}%)`
-        moon.style.transform = `translateX(-50%) translateY(${top_y -= 10}%)`
-        moon.style.opacity = `${opacity += 0.2}`
+        left_container.style.transform = `translateX(${left_x += 100}%)`
+        right_container.style.transform = `translateX(${right_x -= 100}%)`
+        moon.style.transform = `translateX(-50%) translateY(${top_y -= 100}%)`
+        moon.style.opacity = `${opacity += 1}`
     } else if (currentY < startY && left_x >= -100) {
-        left_container.style.transform = `translateX(${left_x -= 10}%)`
-        right_container.style.transform = `translateX(${right_x += 10}%)`
-        moon.style.transform = `translateX(-50%) translateY(${top_y += 10}%)`
-        moon.style.opacity = `${opacity -= 0.2}`
+        left_container.style.transform = `translateX(${left_x -= 100}%)`
+        right_container.style.transform = `translateX(${right_x += 100}%)`
+        moon.style.transform = `translateX(-50%) translateY(${top_y += 100}%)`
+        moon.style.opacity = `${opacity -= 1}`
     }
     startY = currentY; // Update startY for continuous movement detection
 });
