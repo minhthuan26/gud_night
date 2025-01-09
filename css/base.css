@@ -54,7 +54,6 @@ body {
     text-align: center;
     animation: up_down 1s alternate infinite ease-in-out;
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .left-container {
@@ -93,6 +92,7 @@ body {
     transform: translateX(-50%) translateY(50%);
     opacity: 0;
     transition: all 0.5s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .title {
