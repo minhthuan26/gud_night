@@ -1,0 +1,166 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+}
+
+.wrapper-container {
+    min-width: 100vw;
+    max-width: 100vw;
+    min-height: 100vh;
+    max-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+}
+
+.loader.unactive {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.circle {
+    padding: 1rem;
+    border-radius: 50%;
+    border-bottom: #00b3ff solid 3px;
+    border-left: #00b3ff solid 3px;
+    animation: rotate infinite 1s linear;
+}
+
+.desc {
+    position: absolute;
+    /* left: 50%; */
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-weight: bold;
+    text-align: center;
+    animation: up_down 1s alternate infinite ease-in-out;
+    width: 100%;
+}
+
+.left-container {
+    height: 100vh;
+    width: 50%;
+    background-color: cyan;
+    position: relative;
+    transform: translateX(-100%);
+    background-image: url(../assets/images/cat_sleep.jpg);
+    background-size: 200% 200%;
+    background-position: left center;
+    transition: all linear 0.5s;
+}
+
+.right-container {
+    height: 100vh;
+    width: 50%;
+    background-color: cyan;
+    position: relative;
+    transform: translateX(100%);
+    background-image: url(../assets/images/cat_sleep.jpg);
+    background-size: 200% 200%;
+    background-position: right center;
+    transition: all linear 0.5s;
+}
+
+.moon {
+    position: absolute;
+    height: 80vh;
+    width: 80vw;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+}
+
+.sleep {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes up_down {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Small (≥576px) */
+@media (min-width: 576px) {
+    /* Styles for small devices */
+}
+
+/* Medium (≥768px) */
+@media (min-width: 768px) {
+    .moon {
+        left: 80%;
+        transform: translateX(-50%) translateY(50%);
+        width: 40vh;
+    }
+}
+
+/* Large (≥992px) */
+@media (min-width: 992px) {
+
+    /* Styles for large devices */
+    .moon {
+        width: 60vh;
+    }
+}
+
+/* Extra Large (≥1200px) */
+@media (min-width: 1200px) {
+    /* Styles for extra-large devices */
+}
+
+/* XXL (≥1400px) */
+@media (min-width: 1400px) {
+    /* Styles for XXL devices */
+}
