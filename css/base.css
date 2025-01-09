@@ -54,6 +54,7 @@ body {
     text-align: center;
     animation: up_down 1s alternate infinite ease-in-out;
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .left-container {
