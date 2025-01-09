@@ -119,6 +119,16 @@ body {
     }
 }
 
+@keyframes lac_lu {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(60deg);
+    }
+}
+
 @keyframes up_down {
     0% {
         transform: translateY(0);
